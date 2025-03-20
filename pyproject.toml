@@ -1,0 +1,19 @@
+[project]
+authors = [{name = "Henry Ennis-Thomas", email = "henry@henryetdev.com"}]
+name = "duckddns-app"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = ["pyside6>=6.8.2.1,<7", "requests>=2.32.3,<3"]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+duckddns_app = { path = ".", editable = true }
+
+[tool.pixi.tasks]
